@@ -1,9 +1,9 @@
 public class main {
       public static void main(String[] args) {
         //create an array of students with random times and courses ()
-        array of student students = new array of student[20];
-        array of string courses = {"CS101", "CS102", "CS103", "CS104", "CS105"};
-        array of string times = {"Morning", "Afternoon", "Evening"};
+        String[] students = new array of student[20];
+        String[] courses = {"CS101", "CS102", "CS103", "CS104", "CS105"};
+        String[] times = {"Morning", "Afternoon", "Evening"};
 
         //id only make 4 or 5 courses and only a handful of times. maybe morning, afternoon, and evening 
 
