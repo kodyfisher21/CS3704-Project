@@ -11,8 +11,11 @@ public class main {
           System.out.println("Enter your name:");
           String name = scanner.nextLine();
           return name;
-          
+
         }
+        // ask the classes that they are taking for the list
+
+        // ask the time that they will take the class or the time they preffer
 
         //then loop through the students and randomly match students with same course and time
 
