@@ -12,8 +12,11 @@ This relates to our low level design of the behavioral design pattern family. Th
 
 Jay Foti
 What was implemented:
+I implemented the revised Student class that contains the student name and schedule. The schedule is in the form of a 2-D array, with one set representing the hours and the other representing the days. Because the schedule is being stored in Student, I deleted the other student schedule class because it was unneeded. 
 How it was implementated:
+I used pair programming with Kody to update both Student and main so the program was somewhat functional and made sense. We gave feedback to each other to improve our code.
 How it relates to overall system design:
+This relates to the overall system design because we are using a chain of responsiblity design amongst our group to determine who will implement what functionality/aspect of our program.
 
 Yash Atal
 What was implemented:
