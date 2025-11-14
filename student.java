@@ -4,10 +4,12 @@
 public class student {
     private String name;
     private String classInfo;   
+    private String time;
 
-    public student(String name, String classInfo) {
+    public student(String name, String classInfo, String time) {
         this.name = name;
         this.classInfo = classInfo;
+        this.time = time;
     }   
 
     public String getName() {
@@ -16,4 +18,12 @@ public class student {
     public String getClassInfo() {
         return classInfo;
     }
+
+    public String getTime(){
+        return time;
+    }
+
+    @Override
+    public String toString() {
+        return name+ "(" + classInfor+ ","+time+")";
 }
