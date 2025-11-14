@@ -1,10 +1,9 @@
 /* 
- * defines the Student class fields, constructors, and methods
- * 
- * name = name of student as a String
- * schedule = 2D String array to store the Student's class schedule, first set is
- * [0-4] representing M-F, second set is [0-12] representing 8am to 7pm
- * 
+defines the Student class fields, constructors, and methods
+ 
+name = name of student as a String
+schedule = 2D String array to store the Student's class schedule, first set is
+[0-4] representing M-F, second set is [0-12] representing 8am to 7pm
 */
 
 public class Student {
@@ -43,6 +42,4 @@ public class Student {
             schedule[day][hour - 8 + i] = className;
         }
     }
-
-
 }

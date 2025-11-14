@@ -1,68 +1,49 @@
-public class main {
-      public static void main(String[] args) {
-        //create an array of students with random times and courses ()
-        //String[] students = new array of student[20];
+import java.util.Scanner;
+import java.util.Random;
 
-        Scanner scanner  =  new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random rand = new Random();
 
         String[] courses = {"CS101", "CS102", "CS103", "CS104", "CS105"};
-        String[] times = {"Morning", "Afternoon", "Evening"};
+        Student[] students = new Student[20]; // array of students for match testing
 
-        //id only make 4 or 5 courses and only a handful of times. maybe morning, afternoon, and evening 
+        // user input for student
+        System.out.println("Enter your name:");
+        String name = scanner.nextLine();
+        System.out.println("Enter your course: CS101, CS102, CS103, CS104, CS105");
+        String course = scanner.nextLine();
+        System.out.println("Enter your preferred time -> 8-19 for 8am-7pm:");
+        int time = scanner.nextInt();
+        System.out.println("Enter the day -> 0 = Monday, 1 = Tuesday, 2 = Wednesday, 3 = Thursday, 4 = Friday:");
+        int day = scanner.nextInt();
 
-       
-          System.out.println("Enter your name:");
-          String name = scanner.nextLine();
-         
-         System.out.println("Enter your course from the following options: CS101, CS102, CS103, CS104, CS105");
-         String course = scanner.nectLine();
+        // create student
+        Student you = new Student(name);
+        you.addClass(day, time, 1, course);
 
-         System.out.println("Enter your preferred time: Morning", "Afternoon", "Evening");
-         String time = scanner.nextLine();
+        // get random students for comparing puropses
+        for(int i = 0; i < students.length; i++){
+            String randomName = "Student" + (i + 1); 
+            String randomCourse = courses[rand.nextInt(courses.length)]; // random cs course
+            int randomDay = rand.nextInt(5); // 0-4 
+            int randomTime = rand.nextInt(12) + 8; // 8-19
+            students[i] = new Student(randomName);
+            students[i].addClass(randomDay, randomTime, 1, randomCourse);
+        }
 
+        boolean foundMatch = false; // check if schedules match based on day and time
+        for (Student s : students){
+            if(s.getSchedule()[day][time - 8].equals(course)){
+                System.out.println("Succesfully matched with: " + s.getName());
+                foundMatch = true;
+            }
+        }
 
-         student you = new student(name, course, time);
-         Randaon ram = new Random();
-
-
-         for(int i =0; i < student.length; i++){
-
-          String randName = "Student"+(i+1);
-          String randCourse = courses[ram.nextInt(courses.length)];
-          String randTime = times[ram.nextInt(times.length)];
-
-         }
-
-         System.out.println("--Match Time--");
-         System.out.println("Looking for students in " + course+ " during" + time+"...\n");
-
-         boolean foundMatch = false;
-
-         for (Students s : students){
-          if(s.course.equals(course) && s.time.equals(time) && !s.name.equals(you.name)){
-            System.out.println("Matched with: " + s);
-            foundMatch = true;
-          }
-         }
-
-         if(!foundMatch){
+        if(!foundMatch){
             System.out.println("No match was found.");
-          }
-
-          scanner.close();
-         
-
-
-
-        // ask the classes that they are taking for the list
-
-        // ask the time that they will take the class or the time they preffer
-
-        //then loop through the students and randomly match students with same course and time
-
-        //then print the pairs of students
-
-        //
-      }
-
+        }
+        scanner.close();
+    }
 }
