@@ -25,5 +25,8 @@ How it relates to overall system design:
 
 Nicolas Goossens
 What was implemented:
+Together with Yash we created the bare bones of the project and kicked off the development process. We started with defining a student class consisting of basic student attributes like student name and student availibility. We decided initially we would randomly assign students a class and time prefernce and then afterwards pair students with likewise schedules.
 How it was implementated:
-How it relates to overall system design:
+Together, Yash and I worked on one laptop to create the skeleton of the project. We bounced ideas off eachother to make a MVP. Initially we planned to create a simple algorithm matcher and basic student and course classes. 
+How it relates to overall system design: 
+All four of us wanted to initially begin the coding portion of this project however quickly we realised that it would be much easier if we had a strong foundation where we could all work from. Therefore Yash and I implemented the basics allowing for Kody and Jay to easily build on our work. This was a crucial step to our system design and allowed us to make progress without overwriting eachothers work
