@@ -19,9 +19,14 @@ How it relates to overall system design:
 This relates to the overall system design because we are using a chain of responsiblity design amongst our group to determine who will implement what functionality/aspect of our program.
 
 Yash Atal
-What was implemented:
+What was implemented: Togethe with Nicolas we have implemented the basic function of out app that will take the users name, class informationa and the timing that they will take the class. Finally the code will go through the timing and will match the students with each other.
 How it was implementated:
+
+We built the basic system using three Java classes: Student, ClassSchedule, and Main. The program takes the user’s name, course, and preferred time using a Scanner, creates a list of random students, and then compares each student based on matching course and time. Any students who match are printed as potential study partners.
+
 How it relates to overall system design:
+
+This implementation forms the core of our study-group matching feature. It shows how user data is collected, stored, and matched, which directly supports the main requirements of our system. It also provides the foundation for future features like group chat, scheduling tools, and a full user interface.
 
 Nicolas Goossens
 What was implemented:
