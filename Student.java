@@ -15,35 +15,24 @@ import java.util.ArrayList;
  their academic performance
  */
 
-// student bio functionality for code review
-/*
-    allows students to describe themselves in a bio such as study habits
-    and personal goals
-*/
 public class Student {
 
     private String name;
     private String[][] schedule;
-    private ArrayList<String> friends;
     private double gradePointAverage;
-    private String bio;
 
     // constructor without a preset schedule, intializes the proper blank array
     public Student(String name) {
         this.name = name;
         this.schedule = new String[5][13];
-        this.friends = new ArrayList<String>();
         this.gradePointAverage = 0.0;
-        this.bio = "";
     }
 
     // constructor with a preset schedule
-    public Student(String name, String[][] schedule, ArrayList<String> friends, double gradePointAverage, String bio) {
+    public Student(String name, String[][] schedule, double gradePointAverage) {
         this.name = name;
         this.schedule = schedule;
-        this.friends = friends;
         this.gradePointAverage = gradePointAverage;
-        this.bio = bio;
     }
 
     // getter for name
@@ -54,10 +43,6 @@ public class Student {
     // getter for schedule
     public String[][] getSchedule() {
         return schedule;
-    }
-
-    public ArrayList<String> getFriends() {
-        return friends;
     }
 
     // getter for GPA
@@ -76,35 +61,7 @@ public class Student {
         }
     }
 
-    public void addFriend(String name) {
-        friends.add(name);
-    }
-
-    public void removeFriend(String name) {
-        friends.remove(name);
-    }
-
     public void setGradePointAverage(double gpa) {
         gradePointAverage = gpa;
     }
-
-    //getter for the student bio
-    public void getBio() {
-        return bio;
-    }
-
-    //students can set their own bio
-    public void setBio(String description) {
-        bio = description;
-    }
 }
-
-/*
-bio functionality code review: Jay Foti
-overview: I am reviewing the addition of the bio for the student class
-correctness: The getter method for bio had the wrong return type
-clarity: The methods and fields involving bio were all clear
-maintiainability: The methods and fields involving bio all followed conventional formatting
-AI-Specific Concerns: n/a
-Recomendation: return: fix the return type in the getBio() method
-*/
