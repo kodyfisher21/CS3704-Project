@@ -15,24 +15,33 @@ import java.util.ArrayList;
  their academic performance
  */
 
+// student bio functionality for code review
+/*
+    allows students to describe themselves in a bio such as study habits
+    and personal goals
+*/
+
 public class Student {
 
     private String name;
     private String[][] schedule;
     private double gradePointAverage;
+    private String bio;
 
     // constructor without a preset schedule, intializes the proper blank array
     public Student(String name) {
         this.name = name;
         this.schedule = new String[5][13];
         this.gradePointAverage = 0.0;
+        this.bio = "";
     }
 
     // constructor with a preset schedule
-    public Student(String name, String[][] schedule, double gradePointAverage) {
+    public Student(String name, String[][] schedule, double gradePointAverage, String bio) {
         this.name = name;
         this.schedule = schedule;
         this.gradePointAverage = gradePointAverage;
+        this.bio = bio;
     }
 
     // getter for name
@@ -63,5 +72,15 @@ public class Student {
 
     public void setGradePointAverage(double gpa) {
         gradePointAverage = gpa;
+    }
+
+    // getter for student bio
+    public String getBio() {
+        return bio;
+    }
+
+    // allows student to set bio
+    public void setBio(String description) {
+        bio = description;
     }
 }
