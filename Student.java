@@ -1,5 +1,7 @@
 import java.util.*;
 
+// friend functionality for code review
+
 /* 
 defines the Student class fields, constructors, and methods
  
