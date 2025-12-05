@@ -33,6 +33,7 @@ public class Student {
         this.name = name;
         this.schedule = new String[5][13];
         this.gradePointAverage = 0.0;
+        this.bio = "";
     }
 
     // constructor with a preset schedule
