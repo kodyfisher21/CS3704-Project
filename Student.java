@@ -98,3 +98,13 @@ public class Student {
         bio = description;
     }
 }
+
+/*
+bio functionality code review: Jay Foti
+overview: I am reviewing the addition of the bio for the student class
+correctness: The getter method for bio had the wrong return type
+clarity: The methods and fields involving bio were all clear
+maintiainability: The methods and fields involving bio all followed conventional formatting
+AI-Specific Concerns: n/a
+Recomendation: return: fix the return type in the getBio() method
+*/
