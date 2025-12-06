@@ -64,4 +64,10 @@ public class Student {
     public void setGradePointAverage(double gpa) {
         gradePointAverage = gpa;
     }
+
+public String getBio() {
+    return bio;
+}
+
+
 }
