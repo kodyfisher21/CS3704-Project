@@ -20,19 +20,22 @@ public class Student {
     private String name;
     private String[][] schedule;
     private double gradePointAverage;
+    private ArrayList<String> friends;
 
     // constructor without a preset schedule, intializes the proper blank array
     public Student(String name) {
         this.name = name;
         this.schedule = new String[5][13];
         this.gradePointAverage = 0.0;
+        this.friends = new ArrayList<String>();
     }
 
     // constructor with a preset schedule
-    public Student(String name, String[][] schedule, double gradePointAverage) {
+    public Student(String name, String[][] schedule, double gradePointAverage, ArrayList<String> friends) {
         this.name = name;
         this.schedule = schedule;
         this.gradePointAverage = gradePointAverage;
+        this.friends = friends;
     }
 
     // getter for name
@@ -63,5 +66,13 @@ public class Student {
 
     public void setGradePointAverage(double gpa) {
         gradePointAverage = gpa;
+    }
+
+    public void addFriend(String name) {
+        friends.add(name);
+    }
+
+    public void removeFriend(String name) {
+        friends.remove(name);
     }
 }
