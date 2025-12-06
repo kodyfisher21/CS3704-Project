@@ -1,15 +1,10 @@
-
-import java.util.ArrayList;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class StudentTest {
 
     // -------- UNIT TESTS --------
-    /*
-    AI PROMPT: Please write integration tests for the Main class that simulate
- * user input via System.in and capture the console output via System.out. The
- * tests should verify that the Main class behaves as expected when given
- * specific inputs.
-     */
+
     @Test
     public void testConstructorWithoutSchedule() {
         Student s = new Student("Alice");
@@ -24,10 +19,8 @@ public class StudentTest {
     public void testConstructorWithSchedule() {
         String[][] sched = new String[5][13];
         sched[0][0] = "Math";
-        ArrayList<String> friends = new ArrayList<>();
-        double gpa = 3.5;
 
-        Student s = new Student("Bob", sched, friends, gpa);
+        Student s = new Student("Bob", sched);
 
         assertEquals("Bob", s.getName());
         assertEquals("Math", s.getSchedule()[0][0]);
@@ -77,8 +70,10 @@ public class StudentTest {
         }
     }
 
+
     // -------- INTEGRATION TEST --------
     // Uses: constructor → addClass → getters
+
     @Test
     public void testFullScheduleIntegration() {
         Student s = new Student("Grace");

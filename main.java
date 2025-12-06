@@ -1,10 +1,8 @@
-
-import java.util.Random;
 import java.util.Scanner;
+import java.util.Random;
 
-public class Main {
-
-    public static void main(String[] args) {
+public class main {
+    public static void Main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
 
@@ -26,8 +24,8 @@ public class Main {
         you.addClass(day, time, 1, course);
 
         // get random students for comparing puropses
-        for (int i = 0; i < students.length; i++) {
-            String randomName = "Student" + (i + 1);
+        for(int i = 0; i < students.length; i++){
+            String randomName = "Student" + (i + 1); 
             String randomCourse = courses[rand.nextInt(courses.length)]; // random cs course
             int randomDay = rand.nextInt(5); // 0-4 
             int randomTime = rand.nextInt(12) + 8; // 8-19
@@ -36,14 +34,14 @@ public class Main {
         }
 
         boolean foundMatch = false; // check if schedules match based on day and time
-        for (Student s : students) {
-            if (course.equals(s.getSchedule()[day][time - 8])) {
+        for (Student s : students){
+            if(s.getSchedule()[day][time - 8].equals(course)){
                 System.out.println("Succesfully matched with: " + s.getName());
                 foundMatch = true;
             }
         }
 
-        if (!foundMatch) {
+        if(!foundMatch){
             System.out.println("No match was found.");
         }
         scanner.close();
